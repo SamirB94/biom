@@ -1,0 +1,10 @@
+@use './common/' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  color: $goldenBrown
+}
