@@ -1,0 +1,7 @@
+@use '../../styles/common/' as *;
+
+.container {
+	width: 100%;
+	max-width: $pageMaxWidth;
+	margin: 0 auto;
+}

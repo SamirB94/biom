@@ -1,0 +1,61 @@
+@use '../../styles/common/' as *;
+
+.burger-container {
+	position: relative;
+	width: 100%;
+}
+
+.burger-menu {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	top: 68px;
+	left: 0;
+	background-color: $white_75;
+	padding: 20px 50px 20px 30px;
+	transform: translateX(-100%);
+	transition: 0.4s ease all;
+	z-index: 10;
+
+	&.active {
+		transform: translateX(0%);
+	}
+}
+
+.burger-icon {
+	height: 32px;
+	width: 32px;
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	padding: 4px;
+	margin-left: 5px;
+
+	@media (max-width: map-get($breakpoints, md)) {
+		& {
+			display: flex;
+		}
+	}
+}
+
+.burger-item {
+	height: 2px;
+	width: 20px;
+	background: black;
+	transition: all 0.2s ease;
+}
+
+.transform-item {
+	transform-origin: top left;
+}
+
+.first {
+	margin-bottom: 5px;
+}
+
+.third {
+	margin-top: 5px;
+}

@@ -1,10 +1,16 @@
-@use './common/' as *;
+@use '../pages//HomePage/HomePage.scss';
+@use '../components/Navbar/Navbar.scss';
+@use '../components/Navbar/Burger.scss';
 
-* {
-  margin: 0;
-  padding: 0;
+html {
+	scroll-behavior: smooth;
 }
 
-.App {
-  color: $goldenBrown
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
 }

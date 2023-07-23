@@ -1,0 +1,17 @@
+@use './colors' as *;
+
+@font-face {
+  font-family: 'Chronicle';
+  src: url('/public/fonts/Chronicle_Display_Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Chronicle;
+  src: url('/public/fonts/Chronicle_Display_Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}

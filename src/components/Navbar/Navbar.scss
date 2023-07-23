@@ -1,0 +1,113 @@
+@use '../../styles/common/' as *;
+
+.navbar {
+	height: 68px;
+	width: 100%;
+	position: sticky;
+	top: 0;
+	background-color: $white_75;
+	backdrop-filter: blur(10px);
+}
+
+.navbar-content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-inline: 50px;
+	height: 100%;
+}
+
+.burger-content {
+	display: none;
+	align-items: center;
+	height: 100%;
+}
+
+.navbar-content,
+.burger-content {
+	a {
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 15px;
+		font-weight: 700;
+		letter-spacing: 1.5px;
+		line-height: 22px;
+		color: $black;
+	}
+}
+
+.navbar-items {
+	width: 100%;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 40px;
+}
+
+.secondary-navbar-items {
+	float: right;
+}
+
+.cart-container {
+	position: relative;
+
+	img {
+		width: 26px;
+		height: 22px;
+	}
+
+	div {
+		position: absolute;
+		background-color: $goldenBrown;
+		border: 1px solid $white;
+		border-radius: 10px;
+		height: 16px;
+		width: 16px;
+		top: -5px;
+		right: -10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		p {
+			width: 7px;
+			height: 20px;
+			color: $white;
+		}
+	}
+}
+
+.burger-content {
+	display: none;
+}
+
+.biom-logo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@media (max-width: map-get($breakpoints, md)) {
+	.navbar-content {
+		display: none;
+	}
+
+	.burger-content {
+		display: flex;
+	}
+
+	.navbar-items {
+		gap: 20px;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+
+@media (max-width: map-get($breakpoints, lg)) {
+	.navbar-content {
+		padding-inline: 30px;
+	}
+}
