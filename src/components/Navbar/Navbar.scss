@@ -4,6 +4,7 @@
 	height: 68px;
 	width: 100%;
 	position: sticky;
+	z-index: 10;
 	top: 0;
 	background-color: $white_75;
 	backdrop-filter: blur(10px);

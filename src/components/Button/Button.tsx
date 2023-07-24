@@ -1,8 +1,13 @@
 import React from "react";
 
-const Button = ({ children }: any) => {
+type ButtonProps = {
+	children: string;
+	dark?: boolean;
+};
+
+const Button = ({ children, dark = false }: ButtonProps) => {
 	return (
-		<button className='primary-button'>
+		<button className={`primary-button ${dark && "dark"}`}>
 			<span>{children}</span>
 		</button>
 	);

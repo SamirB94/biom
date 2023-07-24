@@ -2,6 +2,7 @@
 @use '../components/Navbar/Navbar.scss';
 @use '../components/Navbar/Burger.scss';
 @use '../components/HeroSection/HeroSection.scss';
+@use '../components/MeetBiomSection/MeetBiomSection.scss';
 @use '../components/Button/Button.scss';
 
 html {
@@ -10,6 +11,11 @@ html {
 
 * {
 	box-sizing: border-box;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	-ms-overflow-style: none;
+	scrollbar-width: none;
 }
 
 body {

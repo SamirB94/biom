@@ -1,0 +1,122 @@
+@use '../../styles/common/' as *;
+
+.meet-biom-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+
+	.background {
+		height: 730px;
+		object-fit: cover;
+		width: 100%;
+		z-index: -1;
+		object-position: 20%;
+	}
+
+	.meet-biom-container {
+		position: absolute;
+		top: 0;
+		left: 15px;
+		height: 88%;
+		.meet-biom {
+			overflow-y: scroll;
+			position: relative;
+			height: 100%;
+			width: 225px;
+			span {
+				transform: rotate(180deg);
+				writing-mode: vertical-lr;
+				white-space: nowrap;
+				font-size: 225px;
+				color: $lightGray;
+				position: absolute;
+				top: 100%;
+				left: 0;
+				width: 100%;
+				animation: scrollLoop 6s linear infinite;
+			}
+		}
+
+		&:hover {
+			span {
+				animation-play-state: paused;
+			}
+		}
+	}
+
+	@keyframes scrollLoop {
+		0% {
+			top: 100%;
+		}
+		100% {
+			top: -150%; /* Move the text to the top, creating the scrolling effect */
+		}
+	}
+
+	button {
+		margin: 42px 0 5px 0;
+	}
+}
+
+.content {
+	position: absolute;
+	margin-inline: 15px;
+	right: 140px;
+}
+
+.title {
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 2.1px;
+	color: $darkTeal;
+	text-transform: uppercase;
+}
+
+.subtitle {
+	font-size: 36px;
+	font-weight: 900;
+	line-height: 40px;
+	color: $darkTeal;
+	margin: 8px 0;
+}
+
+.description {
+	font-size: 18px;
+	line-height: 28px;
+	color: $darkTeal;
+	margin: 0 0 42px 0;
+	max-width: 580px;
+}
+
+.bullets {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+}
+
+.bullet-item {
+	display: flex;
+	align-items: center;
+	gap: 22px;
+}
+
+@media (max-width: map-get($breakpoints, md)) {
+	.subtitle {
+		line-height: 50px;
+	}
+
+	.content {
+		right: auto;
+	}
+}
+
+@media (max-width: map-get($breakpoints, lg)) {
+	.meet-biom-container {
+		display: none;
+	}
+	.background {
+		opacity: 0.5;
+	}
+}

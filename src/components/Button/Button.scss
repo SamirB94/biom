@@ -6,6 +6,10 @@
 	background-color: $white;
 	border-radius: 6px;
 	border: none;
+	&:hover {
+		background-color: $snow;
+		cursor: pointer;
+	}
 	span {
 		color: $darkTurquoise;
 		text-transform: uppercase;
@@ -13,5 +17,15 @@
 		line-height: 30pd;
 		letter-spacing: 1.95px;
 		font-weight: 900;
+	}
+}
+
+.dark {
+	background-color: $darkTurquoise;
+	&:hover {
+		background-color: $darkTeal;
+	}
+	span {
+		color: $snow;
 	}
 }
