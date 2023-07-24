@@ -1,6 +1,8 @@
 @use '../pages//HomePage/HomePage.scss';
 @use '../components/Navbar/Navbar.scss';
 @use '../components/Navbar/Burger.scss';
+@use '../components/HeroSection/HeroSection.scss';
+@use '../components/Button/Button.scss';
 
 html {
 	scroll-behavior: smooth;
