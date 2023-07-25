@@ -7,7 +7,7 @@
 	align-items: center;
 	position: relative;
 
-	.background {
+	.meet-biom-background {
 		height: 730px;
 		object-fit: cover;
 		width: 100%;
@@ -35,7 +35,7 @@
 				top: 100%;
 				left: 0;
 				width: 100%;
-				animation: scrollLoop 6s linear infinite;
+				animation: verticalScrollLoop 6s linear infinite;
 			}
 		}
 
@@ -43,15 +43,6 @@
 			span {
 				animation-play-state: paused;
 			}
-		}
-	}
-
-	@keyframes scrollLoop {
-		0% {
-			top: 100%;
-		}
-		100% {
-			top: -150%; /* Move the text to the top, creating the scrolling effect */
 		}
 	}
 
@@ -66,7 +57,7 @@
 	right: 140px;
 }
 
-.title {
+.meet-biom-title {
 	font-size: 14px;
 	line-height: 20px;
 	letter-spacing: 2.1px;
@@ -74,7 +65,7 @@
 	text-transform: uppercase;
 }
 
-.subtitle {
+.meet-biom-subtitle {
 	font-size: 36px;
 	font-weight: 900;
 	line-height: 40px;
@@ -82,7 +73,7 @@
 	margin: 8px 0;
 }
 
-.description {
+.meet-biom-description {
 	font-size: 18px;
 	line-height: 28px;
 	color: $darkTeal;

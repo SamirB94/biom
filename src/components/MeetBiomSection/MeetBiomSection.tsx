@@ -11,17 +11,17 @@ const MeetBiomSection = () => {
 	);
 	const background = (
 		<img
-			className='background'
+			className='meet-biom-background'
 			src='./assets/images/meet-biom-background.png'
 			srcSet='./assets/images/meet-biom-background@2x.png'
 		/>
 	);
-	const title = <p className='title'>The Biom Dispenser</p>;
+	const title = <p className='meet-biom-title'>The Biom Dispenser</p>;
 	const subtitle = (
-		<p className='subtitle'>Redefine your experience of clean.</p>
+		<p className='meet-biom-subtitle'>Redefine your experience of clean.</p>
 	);
 	const description = (
-		<p className='description'>
+		<p className='meet-biom-description'>
 			A quality engineered wipes dispenser that looks beautiful in your home,
 			making better habits for your home and planet always within reach.
 		</p>

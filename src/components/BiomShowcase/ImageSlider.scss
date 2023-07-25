@@ -1,0 +1,78 @@
+@use '../../styles/common/' as *;
+
+.slider {
+	width: 100%;
+	overflow-x: scroll;
+	white-space: nowrap;
+	.showcase-slider-container {
+		display: flex;
+		width: inherit;
+
+		.showcase-slider {
+			display: flex;
+			position: relative;
+			width: fit-content;
+			gap: 20px;
+
+			.showcase-item {
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-self: center;
+				width: 535px;
+				height: 415px;
+				overflow: hidden;
+				border-radius: 14px;
+
+				p {
+					position: absolute;
+					bottom: 0;
+					font-size: 23px;
+					color: $white;
+					opacity: 0;
+					transition: all 0.3s ease-in;
+				}
+
+				img {
+					object-fit: cover;
+					width: fit-content;
+					transition: all 0.3s ease-in;
+					pointer-events: none;
+					user-select: none;
+				}
+
+				&:hover {
+					p {
+						animation-name: fadeIn;
+						animation-delay: 0s;
+						animation-duration: 0.3s;
+						opacity: 1;
+					}
+
+					img {
+						scale: 1.06;
+						transition: all 0.3s ease-out;
+					}
+				}
+
+				@media (max-width: map-get($breakpoints, md)) {
+					& {
+						max-width: 390px;
+						height: auto;
+						gap: 5px;
+
+						img {
+							object-fit: fill;
+							width: 100%;
+						}
+
+						p {
+							opacity: 1;
+							font-size: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

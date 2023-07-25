@@ -1,0 +1,48 @@
+@use '../../styles/common/' as *;
+
+.biom-showcase {
+	margin-top: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	overflow-x: auto;
+}
+
+.showcase-title {
+	position: absolute;
+	width: 400px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+
+	p:nth-child(1) {
+		font-size: 16px;
+		letter-spacing: 2.4px;
+		line-height: 23px;
+		text-transform: uppercase;
+		color: $white;
+		margin: 0;
+		text-align: center;
+	}
+
+	p:nth-child(2) {
+		font-size: 78px;
+		letter-spacing: -0.78px;
+		line-height: 82px;
+		color: $white;
+		margin: 0;
+		text-align: center;
+	}
+	@media (max-width: map-get($breakpoints, md)) {
+		& {
+			width: 220px;
+			p:nth-child(2) {
+				font-size: 54px;
+				line-height: 46px;
+			}
+		}
+	}
+}

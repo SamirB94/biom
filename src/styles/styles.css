@@ -229,7 +229,7 @@
   align-items: center;
   position: relative;
 }
-.meet-biom-section .background {
+.meet-biom-section .meet-biom-background {
   height: 730px;
   object-fit: cover;
   width: 100%;
@@ -258,18 +258,10 @@
   top: 100%;
   left: 0;
   width: 100%;
-  animation: scrollLoop 6s linear infinite;
+  animation: verticalScrollLoop 6s linear infinite;
 }
 .meet-biom-section .meet-biom-container:hover span {
   animation-play-state: paused;
-}
-@keyframes scrollLoop {
-  0% {
-    top: 100%;
-  }
-  100% {
-    top: -150%; /* Move the text to the top, creating the scrolling effect */
-  }
 }
 .meet-biom-section button {
   margin: 42px 0 5px 0;
@@ -281,7 +273,7 @@
   right: 140px;
 }
 
-.title {
+.meet-biom-title {
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 2.1px;
@@ -289,7 +281,7 @@
   text-transform: uppercase;
 }
 
-.subtitle {
+.meet-biom-subtitle {
   font-size: 36px;
   font-weight: 900;
   line-height: 40px;
@@ -297,7 +289,7 @@
   margin: 8px 0;
 }
 
-.description {
+.meet-biom-description {
   font-size: 18px;
   line-height: 28px;
   color: #002d33;
@@ -333,6 +325,117 @@
     opacity: 0.5;
   }
 }
+.biom-showcase {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.showcase-title {
+  position: absolute;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.showcase-title p:nth-child(1) {
+  font-size: 16px;
+  letter-spacing: 2.4px;
+  line-height: 23px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0;
+  text-align: center;
+}
+.showcase-title p:nth-child(2) {
+  font-size: 78px;
+  letter-spacing: -0.78px;
+  line-height: 82px;
+  color: #ffffff;
+  margin: 0;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .showcase-title {
+    width: 220px;
+  }
+  .showcase-title p:nth-child(2) {
+    font-size: 54px;
+    line-height: 46px;
+  }
+}
+
+.slider {
+  width: 100%;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+.slider .showcase-slider-container {
+  display: flex;
+  width: inherit;
+}
+.slider .showcase-slider-container .showcase-slider {
+  display: flex;
+  position: relative;
+  width: fit-content;
+  gap: 20px;
+}
+.slider .showcase-slider-container .showcase-slider .showcase-item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 535px;
+  height: 415px;
+  overflow: hidden;
+  border-radius: 14px;
+}
+.slider .showcase-slider-container .showcase-slider .showcase-item p {
+  position: absolute;
+  bottom: 0;
+  font-size: 23px;
+  color: #ffffff;
+  opacity: 0;
+  transition: all 0.3s ease-in;
+}
+.slider .showcase-slider-container .showcase-slider .showcase-item img {
+  object-fit: cover;
+  width: fit-content;
+  transition: all 0.3s ease-in;
+  pointer-events: none;
+  user-select: none;
+}
+.slider .showcase-slider-container .showcase-slider .showcase-item:hover p {
+  animation-name: fadeIn;
+  animation-delay: 0s;
+  animation-duration: 0.3s;
+  opacity: 1;
+}
+.slider .showcase-slider-container .showcase-slider .showcase-item:hover img {
+  scale: 1.06;
+  transition: all 0.3s ease-out;
+}
+@media (max-width: 768px) {
+  .slider .showcase-slider-container .showcase-slider .showcase-item {
+    max-width: 390px;
+    height: auto;
+    gap: 5px;
+  }
+  .slider .showcase-slider-container .showcase-slider .showcase-item img {
+    object-fit: fill;
+    width: 100%;
+  }
+  .slider .showcase-slider-container .showcase-slider .showcase-item p {
+    opacity: 1;
+    font-size: 20px;
+  }
+}
+
 .primary-button {
   width: 180px;
   height: 50px;
