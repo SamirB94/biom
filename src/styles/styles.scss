@@ -1,10 +1,11 @@
 @use '../pages//HomePage/HomePage.scss';
 @use '../components/Navbar/Navbar.scss';
 @use '../components/Navbar/Burger.scss';
-@use '../components/HeroSection/HeroSection.scss';
-@use '../components/MeetBiomSection/MeetBiomSection.scss';
+@use '../components/Hero/Hero.scss';
+@use '../components/MeetBiom/MeetBiom.scss';
 @use '../components/BiomShowcase/BiomShowcase.scss';
 @use '../components/BiomShowcase/ImageSlider.scss';
+@use '../components/ChooseBiomColor/ChooseBiomColor.scss';
 @use '../components/Button/Button.scss';
 
 html {

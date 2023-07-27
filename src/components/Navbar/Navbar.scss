@@ -112,3 +112,9 @@
 		padding-inline: 30px;
 	}
 }
+
+@media (min-width: $pageMaxWidth) {
+	.navbar-content {
+		padding-inline: 12%;
+	}
+}

@@ -1,14 +1,16 @@
 import React from "react";
-import HeroSection from "../../components/HeroSection/HeroSection";
-import MeetBiomSection from "../../components/MeetBiomSection/MeetBiomSection";
+import Hero from "../../components/Hero/Hero";
+import MeetBiom from "../../components/MeetBiom/MeetBiom";
 import BiomShowcase from "../../components/BiomShowcase/BiomShowcase";
+import ChooseBiomColor from "../../components/ChooseBiomColor/ChooseBiomColor";
 
 const HomePage = () => {
 	return (
 		<div className='container'>
-			<HeroSection />
-			<MeetBiomSection />
+			<Hero />
+			<MeetBiom />
 			<BiomShowcase />
+			<ChooseBiomColor />
 		</div>
 	);
 };

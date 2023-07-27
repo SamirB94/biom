@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../Button/Button";
 
-const HeroSection = () => {
+const Hero = () => {
 	const background = (
 		<img
 			className='hero-background'
@@ -40,4 +40,4 @@ const HeroSection = () => {
 	);
 };
 
-export default HeroSection;
+export default Hero;

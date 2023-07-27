@@ -1,6 +1,6 @@
 @use '../../styles/common/' as *;
 
-.meet-biom-section {
+.meet-biom-container {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -15,7 +15,7 @@
 		object-position: 20%;
 	}
 
-	.meet-biom-container {
+	.meet-biom-wrapper {
 		position: absolute;
 		top: 0;
 		left: 15px;
@@ -104,7 +104,7 @@
 }
 
 @media (max-width: map-get($breakpoints, lg)) {
-	.meet-biom-container {
+	.meet-biom-wrapper {
 		display: none;
 	}
 	.background {

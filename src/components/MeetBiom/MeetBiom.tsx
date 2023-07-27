@@ -1,9 +1,9 @@
 import React from "react";
 import Button from "../Button/Button";
 
-const MeetBiomSection = () => {
+const MeetBiom = () => {
 	const meetBiom = (
-		<div className='meet-biom-container'>
+		<div className='meet-biom-wrapper'>
 			<div className='meet-biom'>
 				<span>meet biom</span>
 			</div>
@@ -60,7 +60,7 @@ const MeetBiomSection = () => {
 		</div>
 	);
 	return (
-		<div className='meet-biom-section'>
+		<div className='meet-biom-container'>
 			{meetBiom}
 			{background}
 			{content}
@@ -68,4 +68,4 @@ const MeetBiomSection = () => {
 	);
 };
 
-export default MeetBiomSection;
+export default MeetBiom;
