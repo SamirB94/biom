@@ -1,0 +1,74 @@
+@use '../../styles/common/' as *;
+
+.reviews {
+	min-height: 450px;
+	width: 100%;
+	background-color: $lightGray;
+	margin-top: -20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: $darkTurquoise;
+
+	.reviews-title {
+		font-size: 14px;
+		letter-spacing: 2.1px;
+		margin: 0 auto;
+		text-align: center;
+		width: 100%;
+	}
+
+	.review-content {
+		width: 100%;
+		max-width: 747px;
+		text-align: center;
+		padding-inline: 25px;
+		position: relative;
+
+		.review {
+			font-size: 25px;
+			font-weight: 700;
+			line-height: 42px;
+		}
+
+		.author {
+			margin-bottom: 34px;
+			font-size: 13px;
+			letter-spacing: 1.3px;
+		}
+	}
+
+	.active {
+		position: relative;
+		animation: slideIn 1s ease forwards;
+	}
+
+	.hide {
+		display: none;
+	}
+
+	.dots {
+		.dot {
+			height: 8px;
+			width: 8px;
+			margin-inline: 6px;
+			padding: 0;
+			border: 1px solid $darkTurquoise;
+			background-color: transparent;
+			border-radius: 50%;
+			transition: background-color 300ms ease;
+			cursor: pointer;
+
+			&:hover {
+				background-color: $darkTurquoise;
+				transition: background-color 300ms ease;
+			}
+		}
+
+		.filled {
+			background-color: $darkTurquoise;
+			transition: background-color 300ms ease;
+		}
+	}
+}

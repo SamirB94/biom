@@ -12,6 +12,32 @@
   font-style: normal;
   font-display: swap;
 }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes verticalScrollLoop {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: -150%;
+  }
+}
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    left: 20px;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
 .container {
   width: 100%;
   max-width: 1440px;
@@ -450,7 +476,7 @@
 .choose-biom-color-container .call-to-action-content {
   display: flex;
   flex-direction: column;
-  width: 420px;
+  width: 435px;
   padding-left: 55px;
 }
 .choose-biom-color-container .call-to-action-content p {
@@ -502,7 +528,7 @@
 }
 .choose-biom-color-container .biom-items-content div {
   width: 100%;
-  margin-left: -40px;
+  margin-left: -50px;
   position: relative;
 }
 .choose-biom-color-container .biom-items-content div:hover div p {
@@ -538,6 +564,7 @@
   position: relative;
   left: 0;
   transition: 0.3s;
+  clip-path: inset(16px);
 }
 @media (max-width: 1400px) {
   .choose-biom-color-container {
@@ -583,6 +610,68 @@
   .choose-biom-color-container .call-to-action-content {
     width: 90%;
   }
+}
+
+.reviews {
+  min-height: 450px;
+  width: 100%;
+  background-color: #f2f2f2;
+  margin-top: -20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #004a4c;
+}
+.reviews .reviews-title {
+  font-size: 14px;
+  letter-spacing: 2.1px;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+.reviews .review-content {
+  width: 100%;
+  max-width: 747px;
+  text-align: center;
+  padding-inline: 25px;
+  position: relative;
+}
+.reviews .review-content .review {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 42px;
+}
+.reviews .review-content .author {
+  margin-bottom: 34px;
+  font-size: 13px;
+  letter-spacing: 1.3px;
+}
+.reviews .active {
+  position: relative;
+  animation: slideIn 1s ease forwards;
+}
+.reviews .hide {
+  display: none;
+}
+.reviews .dots .dot {
+  height: 8px;
+  width: 8px;
+  margin-inline: 6px;
+  padding: 0;
+  border: 1px solid #004a4c;
+  background-color: transparent;
+  border-radius: 50%;
+  transition: background-color 300ms ease;
+  cursor: pointer;
+}
+.reviews .dots .dot:hover {
+  background-color: #004a4c;
+  transition: background-color 300ms ease;
+}
+.reviews .dots .filled {
+  background-color: #004a4c;
+  transition: background-color 300ms ease;
 }
 
 .primary-button {
