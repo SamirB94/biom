@@ -1,0 +1,127 @@
+@use '../../styles/common/' as *;
+
+.footer {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	height: 538px;
+	top: 80px;
+}
+
+.footer-info-items {
+	height: 386px;
+	width: 100%;
+	background-color: $darkTurquoise;
+	opacity: 0.72;
+	position: absolute;
+	bottom: 0;
+}
+
+.footer-image-content-wrapper {
+	width: 1302px;
+	height: 100%;
+	max-height: 300px;
+	position: relative;
+	z-index: 1;
+	top: 0;
+	img {
+		background-color: $lightGray;
+		border-radius: 14px;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: 42%;
+	}
+}
+
+.footer-subscription-content {
+	p {
+		margin: 0;
+	}
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	position: absolute;
+	top: 50%;
+	transform: translate(25%, -50%);
+	max-width: 414px;
+	width: 100%;
+
+	.input-wrapper {
+		input {
+			width: 100%;
+			height: 52px;
+		}
+		.input-icon-wrapper {
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 1;
+			right: -3%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			width: 44px;
+			height: 38px;
+			background-color: #004a4c;
+			border-radius: 6px;
+			color: white;
+
+			.arrow-right-dark-bg {
+				width: 100%;
+				height: 55%;
+			}
+		}
+	}
+}
+
+.footer-subscription-title {
+	font-weight: 900;
+	font-size: 30px;
+	line-height: 38px;
+}
+
+.footer-subscription-description {
+	margin: 14px 0 18px;
+}
+
+.input-wrapper {
+	position: relative;
+	input {
+		padding: 15px;
+		border: none;
+		border-radius: 6px;
+	}
+}
+
+@media screen and (max-width: map-get($breakpoints, md)) and (min-width: 577px) {
+	.footer-image-content-wrapper {
+		top: 25px;
+		img {
+			border-radius: 0;
+		}
+	}
+
+	.footer-subscription-content {
+		max-width: 350px;
+
+		p {
+			margin: 5px 0 5px;
+		}
+	}
+}
+
+@media (max-width: map-get($breakpoints, sm)) {
+	.footer-image-content-wrapper {
+		top: 80px;
+		img {
+			border-radius: 0;
+		}
+	}
+
+	.footer-subscription-content {
+		gap: 10px;
+		max-width: 300px;
+		transform: translate(12%, -50%);
+	}
+}

@@ -579,6 +579,9 @@
   .choose-biom-color-container .call-to-action-content p {
     text-align: center;
   }
+  .choose-biom-color-container .call-to-action-content .button-content {
+    align-self: center;
+  }
   .choose-biom-color-container .biom-items-content {
     height: 100%;
   }
@@ -617,6 +620,7 @@
   width: 100%;
   background-color: #f2f2f2;
   margin-top: -20px;
+  padding: 40px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -674,6 +678,390 @@
   transition: background-color 300ms ease;
 }
 
+.biom-wipes-container {
+  height: 896px;
+  position: relative;
+}
+
+.girl-wiping-image {
+  position: absolute;
+  top: 90px;
+  left: 69px;
+  z-index: 1;
+}
+
+.biom-wipes-image {
+  position: absolute;
+  bottom: 90px;
+  left: 397px;
+  z-index: 2;
+}
+
+.biom-wipes-info-wrapper {
+  position: absolute;
+  top: 126px;
+  right: 69px;
+  width: 100%;
+  height: 100%;
+  max-width: 858px;
+  max-height: 606px;
+  background-color: #dae5e5;
+  padding-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+.biom-wipes-info-wrapper .biom-wipes-info {
+  width: 600px;
+  margin-left: 222px;
+}
+.biom-wipes-info-wrapper .biom-wipes-info p {
+  margin: 0;
+}
+.biom-wipes-info-wrapper .biom-wipes-info button {
+  position: absolute;
+  bottom: -25px;
+}
+.biom-wipes-info-wrapper .biom-wipes-info .biom-wipes-title {
+  font-size: 14px;
+  line-height: 62px;
+  letter-spacing: 2.1px;
+}
+.biom-wipes-info-wrapper .biom-wipes-info .biom-wipes-subtitle {
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: 900;
+}
+.biom-wipes-info-wrapper .biom-wipes-info .biom-wipes-description {
+  font-size: 18px;
+  line-height: 28px;
+  margin: 16px 0;
+}
+.biom-wipes-info-wrapper .biom-wipes-info .biom-wipes-bullet-items {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+.biom-wipes-info-wrapper .biom-wipes-info .biom-wipes-bullet-items .bullet-item {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+@media (max-width: 1400px) {
+  .biom-wipes-info-wrapper {
+    right: initial;
+    max-width: 100%;
+  }
+  .biom-wipes-info-wrapper .biom-wipes-info {
+    width: 600px;
+    margin: 0;
+  }
+  .girl-wiping-image {
+    top: initial;
+    left: initial;
+    bottom: 165px;
+    right: 0;
+  }
+  .girl-wiping-image img {
+    height: 400px;
+  }
+  .biom-wipes-image {
+    left: initial;
+    right: 145px;
+    bottom: 0;
+  }
+  .biom-wipes-image img {
+    height: 370px;
+  }
+}
+@media (max-width: 1200px) {
+  .biom-wipes-info-wrapper {
+    top: 100px;
+  }
+  .girl-wiping-image img {
+    height: 350px;
+  }
+  .biom-wipes-image img {
+    height: 325px;
+  }
+}
+@media (max-width: 768px) {
+  .biom-wipes-container {
+    height: 800px;
+  }
+  .biom-wipes-info-wrapper {
+    max-height: 100%;
+    top: 0;
+    padding: 0;
+  }
+  .girl-wiping-image {
+    display: none;
+  }
+  .biom-wipes-image {
+    display: none;
+  }
+  .biom-wipes-info-wrapper .biom-wipes-info {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 50px 30px;
+  }
+  .biom-wipes-info-wrapper .biom-wipes-info button {
+    bottom: 50px;
+  }
+}
+section {
+  width: 100%;
+  padding-inline: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+section video {
+  width: 100%;
+  border-radius: 14px;
+}
+section .ocean-care-wipes-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  text-align: center;
+  max-width: 636px;
+  width: 100%;
+  color: #fffafa;
+}
+section .ocean-care-wipes-info button {
+  text-transform: uppercase;
+}
+section .ocean-care-wipes-title {
+  font-size: 14px;
+  letter-spacing: 2.1px;
+  text-transform: uppercase;
+  margin: 0;
+}
+section .ocean-care-wipes-subtitle {
+  font-size: 36px;
+  line-height: 62px;
+  font-weight: 900;
+  margin: 0;
+}
+section .ocean-care-wipes-description {
+  font-size: 18px;
+  line-height: 28px;
+  margin: 0 0 24px;
+}
+
+@media (max-width: 1200px) {
+  section {
+    padding-inline: 0;
+  }
+  section video {
+    border-radius: 0;
+  }
+}
+@media (max-width: 576px) {
+  section .ocean-care-wipes-title {
+    font-size: 12px;
+  }
+  section .ocean-care-wipes-subtitle {
+    font-size: 22px;
+    line-height: 36px;
+  }
+  section .ocean-care-wipes-description {
+    font-size: 14px;
+    line-height: 28px;
+  }
+  section .ocean-care-wipes-info button {
+    height: 40px;
+  }
+}
+.clean-with-biom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 634px;
+}
+
+.hash-tag {
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 44px;
+}
+
+.clean-with-biom-slider {
+  display: flex;
+  height: 290px;
+  width: 100%;
+  overflow-x: scroll;
+  gap: 30px;
+}
+.clean-with-biom-slider .clean-with-biom-image {
+  object-fit: contain;
+  align-self: flex-end;
+}
+.clean-with-biom-slider .clean-with-biom-image:nth-child(odd) {
+  align-self: flex-start;
+}
+
+.button-content {
+  display: flex;
+  cursor: pointer;
+  height: 50px;
+  width: 277px;
+}
+.button-content:hover .instagram-icon-wrapper {
+  background-color: #002d33;
+}
+.button-content:hover .instagram-icon-wrapper .instagram-icon {
+  color: #ffffff;
+}
+.button-content button {
+  width: 100%;
+  background: none;
+  cursor: pointer;
+  border: 2px solid #002d33;
+  border-right: 0;
+  background-color: white;
+  color: #002d33;
+  height: 50px;
+  border-radius: 6px 0 0 6px;
+  text-transform: uppercase;
+}
+.button-content .instagram-icon-wrapper {
+  border: 2px solid #002d33;
+  border-radius: 0 6px 6px 0;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-content .instagram-icon-wrapper .instagram-icon {
+  height: 100%;
+  width: 20px;
+  color: #002d33;
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 538px;
+  top: 80px;
+}
+
+.footer-info-items {
+  height: 386px;
+  width: 100%;
+  background-color: #004a4c;
+  opacity: 0.72;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer-image-content-wrapper {
+  width: 1302px;
+  height: 100%;
+  max-height: 300px;
+  position: relative;
+  z-index: 1;
+  top: 0;
+}
+.footer-image-content-wrapper img {
+  background-color: #f2f2f2;
+  border-radius: 14px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 42%;
+}
+
+.footer-subscription-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translate(25%, -50%);
+  max-width: 414px;
+  width: 100%;
+}
+.footer-subscription-content p {
+  margin: 0;
+}
+.footer-subscription-content .input-wrapper input {
+  width: 100%;
+  height: 52px;
+}
+.footer-subscription-content .input-wrapper .input-icon-wrapper {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  right: -3%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 38px;
+  background-color: #004a4c;
+  border-radius: 6px;
+  color: white;
+}
+.footer-subscription-content .input-wrapper .input-icon-wrapper .arrow-right-dark-bg {
+  width: 100%;
+  height: 55%;
+}
+
+.footer-subscription-title {
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 38px;
+}
+
+.footer-subscription-description {
+  margin: 14px 0 18px;
+}
+
+.input-wrapper {
+  position: relative;
+}
+.input-wrapper input {
+  padding: 15px;
+  border: none;
+  border-radius: 6px;
+}
+
+@media screen and (max-width: 768px) and (min-width: 577px) {
+  .footer-image-content-wrapper {
+    top: 25px;
+  }
+  .footer-image-content-wrapper img {
+    border-radius: 0;
+  }
+  .footer-subscription-content {
+    max-width: 350px;
+  }
+  .footer-subscription-content p {
+    margin: 5px 0 5px;
+  }
+}
+@media (max-width: 576px) {
+  .footer-image-content-wrapper {
+    top: 80px;
+  }
+  .footer-image-content-wrapper img {
+    border-radius: 0;
+  }
+  .footer-subscription-content {
+    gap: 10px;
+    max-width: 300px;
+    transform: translate(12%, -50%);
+  }
+}
 .primary-button {
   width: 180px;
   height: 50px;

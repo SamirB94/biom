@@ -1,0 +1,159 @@
+@use '../../styles/common/' as *;
+
+.biom-wipes-container {
+	height: 896px;
+	position: relative;
+}
+
+.girl-wiping-image {
+	position: absolute;
+	top: 90px;
+	left: 69px;
+	z-index: 1;
+}
+
+.biom-wipes-image {
+	position: absolute;
+	bottom: 90px;
+	left: 397px;
+	z-index: 2;
+}
+
+.biom-wipes-info-wrapper {
+	position: absolute;
+	top: 126px;
+	right: 69px;
+	width: 100%;
+	height: 100%;
+	max-width: 858px;
+	max-height: 606px;
+	background-color: $lightBlueGray;
+	padding-top: 60px;
+	display: flex;
+	justify-content: center;
+
+	.biom-wipes-info {
+		width: 600px;
+		margin-left: 222px;
+
+		p {
+			margin: 0;
+		}
+
+		button {
+			position: absolute;
+			bottom: -25px;
+		}
+
+		.biom-wipes-title {
+			font-size: 14px;
+			line-height: 62px;
+			letter-spacing: 2.1px;
+		}
+
+		.biom-wipes-subtitle {
+			font-size: 36px;
+			line-height: 44px;
+			font-weight: 900;
+		}
+
+		.biom-wipes-description {
+			font-size: 18px;
+			line-height: 28px;
+			margin: 16px 0;
+		}
+
+		.biom-wipes-bullet-items {
+			display: flex;
+			flex-direction: column;
+			gap: 35px;
+
+			.bullet-item {
+				font-size: 18px;
+				line-height: 26px;
+			}
+		}
+	}
+}
+
+@media (max-width: map-get($breakpoints, xxl)) {
+	.biom-wipes-info-wrapper {
+		right: initial;
+		max-width: 100%;
+
+		.biom-wipes-info {
+			width: 600px;
+			margin: 0;
+		}
+	}
+
+	.girl-wiping-image {
+		top: initial;
+		left: initial;
+		bottom: 165px;
+		right: 0;
+		img {
+			height: 400px;
+		}
+	}
+
+	.biom-wipes-image {
+		left: initial;
+		right: 145px;
+		bottom: 0;
+		img {
+			height: 370px;
+		}
+	}
+}
+
+@media (max-width: map-get($breakpoints, xl)) {
+	.biom-wipes-info-wrapper {
+		top: 100px;
+	}
+
+	.girl-wiping-image {
+		img {
+			height: 350px;
+		}
+	}
+
+	.biom-wipes-image {
+		img {
+			height: 325px;
+		}
+	}
+}
+
+@media (max-width: map-get($breakpoints, md)) {
+	.biom-wipes-container {
+		height: 800px;
+	}
+
+	.biom-wipes-info-wrapper {
+		max-height: 100%;
+		top: 0;
+		padding: 0;
+	}
+
+	.girl-wiping-image {
+		display: none;
+	}
+
+	.biom-wipes-image {
+		display: none;
+	}
+
+	.biom-wipes-info-wrapper {
+		.biom-wipes-info {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 50px 30px;
+
+			button {
+				bottom: 50px;
+			}
+		}
+	}
+}

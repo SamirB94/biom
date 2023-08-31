@@ -1,0 +1,77 @@
+@use '../../styles/common/' as *;
+
+.clean-with-biom {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 100%;
+	height: 634px;
+}
+
+.hash-tag {
+	font-weight: 900;
+	font-size: 36px;
+	line-height: 44px;
+}
+
+.clean-with-biom-slider {
+	display: flex;
+	height: 290px;
+	width: 100%;
+	overflow-x: scroll;
+	gap: 30px;
+
+	.clean-with-biom-image {
+		object-fit: contain;
+		align-self: flex-end;
+	}
+
+	.clean-with-biom-image:nth-child(odd) {
+		align-self: flex-start;
+	}
+}
+
+.button-content {
+	display: flex;
+	cursor: pointer;
+	height: 50px;
+	width: 277px;
+
+	&:hover {
+		.instagram-icon-wrapper {
+			background-color: $darkTeal;
+			.instagram-icon {
+				color: $white;
+			}
+		}
+	}
+
+	button {
+		width: 100%;
+		background: none;
+		cursor: pointer;
+		border: 2px solid $darkTeal;
+		border-right: 0;
+		background-color: white;
+		color: $darkTeal;
+		height: 50px;
+		border-radius: 6px 0 0 6px;
+		text-transform: uppercase;
+	}
+
+	.instagram-icon-wrapper {
+		border: 2px solid $darkTeal;
+		border-radius: 0 6px 6px 0;
+		width: 20%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.instagram-icon {
+			height: 100%;
+			width: 20px;
+			color: $darkTeal;
+		}
+	}
+}
