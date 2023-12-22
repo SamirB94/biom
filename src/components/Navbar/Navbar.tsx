@@ -14,7 +14,7 @@ const Navbar = () => {
 				</li>
 				<li>
 					<a href='/#'>
-						<span>Why Biom</span>
+						<span>Why not Biom</span>
 					</a>
 				</li>
 				<li>
@@ -90,10 +90,10 @@ const Navbar = () => {
 	);
 
 	return (
-		<div className='navbar'>
+		<nav className='navbar'>
 			{burgerContent}
 			{navbarContent}
-		</div>
+		</nav>
 	);
 };
 
